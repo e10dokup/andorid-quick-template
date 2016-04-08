@@ -1,9 +1,8 @@
 package info.e10dokup.androidquicktemplate;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 
 import info.e10dokup.androidquicktemplate.core.BaseActivity;
 import info.e10dokup.androidquicktemplate.core.BaseFragment;
@@ -18,11 +17,18 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void replaceFragment(BaseFragment fragment, boolean recordBackstack) {
-
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.container, fragment);
+        if(recordBackstack) {
+            transaction.addToBackStack(null);
+        }
+        transaction.commit();
     }
 
     @Override
     public void popFragment() {
-
+        FragmentManager manager = getSupportFragmentManager();
+        manager.popBackStack();
     }
 }
