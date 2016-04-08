@@ -28,10 +28,6 @@ public abstract class BaseFragment extends Fragment {
         getBaseActivity().popFragment();
     }
 
-    public boolean requireAuth() {
-        return true;
-    }
-
     public boolean onBackPressed() {
         // Overwrite this!!
         return false;
