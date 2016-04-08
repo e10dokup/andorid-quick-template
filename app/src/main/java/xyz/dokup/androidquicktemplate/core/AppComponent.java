@@ -1,7 +1,7 @@
-package info.e10dokup.androidquicktemplate.core;
+package xyz.dokup.androidquicktemplate.core;
 
 import dagger.Component;
-import info.e10dokup.androidquicktemplate.MainActivity;
+import xyz.dokup.androidquicktemplate.MainActivity;
 
 @Component(
         modules = MyModule.class

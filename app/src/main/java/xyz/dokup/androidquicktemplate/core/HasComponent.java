@@ -1,4 +1,4 @@
-package info.e10dokup.androidquicktemplate.core;
+package xyz.dokup.androidquicktemplate.core;
 
 public interface HasComponent<C> {
     C getComponent();

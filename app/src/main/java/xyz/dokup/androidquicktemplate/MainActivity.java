@@ -1,11 +1,11 @@
-package info.e10dokup.androidquicktemplate;
+package xyz.dokup.androidquicktemplate;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import info.e10dokup.androidquicktemplate.core.BaseActivity;
-import info.e10dokup.androidquicktemplate.core.BaseFragment;
+import xyz.dokup.androidquicktemplate.core.BaseActivity;
+import xyz.dokup.androidquicktemplate.core.BaseFragment;
 
 public class MainActivity extends BaseActivity {
 

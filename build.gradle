@@ -6,9 +6,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.0.0-rc3'
+        classpath 'com.android.tools.build:gradle:2.0.0'
         classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.12.0'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.6'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     }
 }
 
@@ -31,13 +31,13 @@ subprojects {
 
 project.ext {
     compileSdkVersion = 23
-    buildToolsVersion = '23.0.0'
+    buildToolsVersion = '23.0.3'
 
     preDexLibs = !project.hasProperty('disablePreDex')
 
-    supportPackageVersion = '23.0.0'
+    supportPackageVersion = '23.2.1'
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.6'
+    gradleVersion = '2.10'
 }

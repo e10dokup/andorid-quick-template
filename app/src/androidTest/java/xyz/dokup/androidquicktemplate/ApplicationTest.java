@@ -1,4 +1,4 @@
-package info.e10dokup.androidquicktemplate;
+package xyz.dokup.androidquicktemplate;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
