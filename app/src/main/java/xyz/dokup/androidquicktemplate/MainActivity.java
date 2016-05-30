@@ -27,6 +27,16 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
+    public void replaceFragment(BaseFragment fragment, boolean recordBackstack, String tag) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.container, fragment, tag);
+        if(recordBackstack) {
+            transaction.addToBackStack(null);
+        }
+        transaction.commit();
+    }
+    @Override
     public void popFragment() {
         FragmentManager manager = getSupportFragmentManager();
         manager.popBackStack();
