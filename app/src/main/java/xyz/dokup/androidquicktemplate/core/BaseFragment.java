@@ -13,6 +13,10 @@ public abstract class BaseFragment extends Fragment {
         getBaseActivity().replaceFragment(fragment, recordBackstack);
     }
 
+    public void replaceFragment(BaseFragment fragment, boolean recordBackStack, String tag) {
+        getBaseActivity().replaceFragment(fragment, recordBackStack, tag);
+    }
+
     public void popFragment() {
         getBaseActivity().popFragment();
     }

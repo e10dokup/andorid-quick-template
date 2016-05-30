@@ -15,6 +15,8 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public abstract void replaceFragment(BaseFragment fragment, boolean recordBackstack);
 
+    public abstract void replaceFragment(BaseFragment fragment, boolean recordBackstack, String tag);
+
     public abstract void popFragment();
 
     public void onFragmentResumed(BaseFragment fragment) {
