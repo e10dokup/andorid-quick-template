@@ -9,6 +9,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import xyz.dokup.androidquicktemplate.core.BaseActivity;
 import xyz.dokup.androidquicktemplate.core.BaseFragment;
+import xyz.dokup.androidquicktemplate.core.MyApplication;
 import xyz.dokup.androidquicktemplate.fragment.MainFragment;
 
 public class MainActivity extends BaseActivity {
@@ -20,6 +21,11 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        { // Inject values
+            MyApplication app = (MyApplication) getApplication();
+            app.getComponent().inject(this);
+        }
 
         ButterKnife.bind(this);
 

@@ -16,7 +16,7 @@ public class MyApplication extends Application{
         super.onCreate();
 
         mComponent = DaggerAppComponent.builder()
-                .myModule(new MyModule(this))
+//                .myModule(new MyModule(this))
                 .build();
         // mComponent.injectApplication(this);
     }
