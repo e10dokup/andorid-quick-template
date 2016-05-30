@@ -9,6 +9,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import xyz.dokup.androidquicktemplate.core.BaseActivity;
 import xyz.dokup.androidquicktemplate.core.BaseFragment;
+import xyz.dokup.androidquicktemplate.fragment.MainFragment;
 
 public class MainActivity extends BaseActivity {
 
@@ -22,6 +23,12 @@ public class MainActivity extends BaseActivity {
 
         ButterKnife.bind(this);
 
+        setToolbarStatus();
+
+        replaceFragment(new MainFragment(), false);
+    }
+
+    private void setToolbarStatus() {
         mToolbar.setTitle(R.string.app_name);
     }
 
