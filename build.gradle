@@ -35,7 +35,7 @@ project.ext {
 
     preDexLibs = !project.hasProperty('disablePreDex')
 
-    supportPackageVersion = '23.2.1'
+    supportPackageVersion = '24.1.1'
 }
 
 task wrapper(type: Wrapper) {
