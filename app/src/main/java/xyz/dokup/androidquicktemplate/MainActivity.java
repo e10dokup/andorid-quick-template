@@ -5,17 +5,23 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 
+import javax.inject.Inject;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import xyz.dokup.androidquicktemplate.core.BaseActivity;
 import xyz.dokup.androidquicktemplate.core.BaseFragment;
 import xyz.dokup.androidquicktemplate.core.MyApplication;
+import xyz.dokup.androidquicktemplate.db.model.OrmaDatabase;
 import xyz.dokup.androidquicktemplate.fragment.MainFragment;
 
 public class MainActivity extends BaseActivity {
 
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
+
+    @Inject
+    OrmaDatabase mOrmaDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
