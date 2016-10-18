@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import xyz.dokup.androidquicktemplate.R;
 import xyz.dokup.androidquicktemplate.core.BaseFragment;
@@ -19,7 +19,7 @@ public class MainFragment extends BaseFragment {
     private static final String TAG = MainFragment.class.getSimpleName();
     private final MainFragment self = this;
 
-    @Bind(R.id.textView)
+    @BindView(R.id.textView)
     TextView mTextView;
 
     @Nullable
@@ -36,6 +36,5 @@ public class MainFragment extends BaseFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 }
