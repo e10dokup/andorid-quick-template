@@ -5,7 +5,7 @@ def VERSION_CODE = 1
 def VERSION_NAME = "1.0.0"
 def PACKAGE_NAME = "xyz.dokup.example"
 def MIN_SDK_VERSION = 21
-def TARGET_SDK_VERSION = 22
+def TARGET_SDK_VERSION = 24
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -84,11 +84,13 @@ dependencies {
     compile "com.android.support:percent:${supportPackageVersion}"
     compile "com.android.support:support-annotations:${supportPackageVersion}"
 
-    compile "com.jakewharton:butterknife:7.0.1"
-    apt "com.jakewharton:butterknife:7.0.1"
+    compile 'com.squareup:javapoet:1.7.0'
 
-    apt "com.google.dagger:dagger-compiler:2.6"
-    compile 'com.google.dagger:dagger:2.6'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    compile 'com.google.dagger:dagger:2.7'
+    apt 'com.google.dagger:dagger-compiler:2.7'
     compile 'org.glassfish:javax.annotation:10.0-b28'
 
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
